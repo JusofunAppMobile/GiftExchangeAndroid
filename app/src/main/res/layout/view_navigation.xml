@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/vNavigation"
+    android:layout_height="45dp"
+    android:background="@color/common"
+    tools:showIn="@layout/act_login">
+
+    <ImageView
+        android:id="@+id/ivTitleLeft"
+        android:layout_width="45dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/img_back"
+        android:padding="13dp" />
+
+    <TextView
+        android:id="@+id/tvTitleLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/ivTitleLeft"
+        android:textColor="#FFF"
+        android:textSize="14sp" />
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="#FFF"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvTitleRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:textColor="#FFADA7"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/ivTitleRight"
+        android:layout_width="45dp"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/tvTitleRight"
+        android:padding="13dp"/>
+
+</RelativeLayout>

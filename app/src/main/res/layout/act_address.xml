@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/C_Layout_Root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_navigation" />
+
+    <View style="@style/C_Empty_Gray" />
+
+
+    <LinearLayout style="@style/C_3">
+
+        <TextView
+            style="@style/C_18"
+            android:text="收货人：" />
+
+        <EditText
+            android:id="@+id/etName"
+            style="@style/C_19"
+            android:hint="请输入收货人" />
+
+    </LinearLayout>
+
+    <View style="@style/C_Line" />
+
+    <LinearLayout style="@style/C_3">
+
+        <TextView
+            style="@style/C_18"
+            android:text="手机号码：" />
+
+        <EditText
+            android:id="@+id/etPhone"
+            style="@style/C_19"
+            android:hint="请输入手机号码"
+            android:inputType="phone"
+            android:maxLength="11" />
+
+    </LinearLayout>
+
+    <View style="@style/C_Line" />
+
+    <LinearLayout
+        android:id="@+id/vLocation"
+        style="@style/C_3">
+
+        <TextView
+            style="@style/C_18"
+            android:text="所在地区：" />
+
+        <ImageView
+            android:id="@+id/ivLocation"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="-25dp"
+            android:padding="5dp"
+            android:src="@drawable/img_location" />
+
+        <TextView
+            android:id="@+id/etAddr"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:textSize="14sp"
+            android:textColor="#333"
+            android:textColorHint="#999"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center_vertical"
+            android:hint="请选择所在地区" />
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/img_right" />
+
+    </LinearLayout>
+
+    <View style="@style/C_Line" />
+
+    <LinearLayout style="@style/C_3">
+
+        <TextView
+            style="@style/C_18"
+            android:text="详细地址：" />
+
+        <EditText
+            android:id="@+id/etAddrDetial"
+            style="@style/C_19"
+            android:layout_marginRight="10dp"
+            android:hint="请输入详细地址" />
+
+    </LinearLayout>
+
+    <View style="@style/C_Line" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/C_Common_Red"
+        android:layout_marginBottom="40dp"
+        android:onClick="commit"
+        android:text="提交" />
+
+
+</LinearLayout>

@@ -1,0 +1,155 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.jusfoun.giftexchange"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 103
+        versionName '1.0.3'
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    signingConfigs {
+        jusfoun {
+            keyAlias 'jusfoun'
+            keyPassword 'jusfoun'
+            storeFile file('keystore/jusfoun.keystore')
+            storePassword 'jusfoun'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //移除无用的资源文件
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.jusfoun
+//            resValue "string", "host", "http://api.imjuxin.com/duijiang/"
+            resValue "string", "host", "http://api.jinshangmei.top/"
+            // 运营商ID
+            buildConfigField "String", "COMPANYID", '"123456"'
+            // 正式key
+            manifestPlaceholders = [UMENG_APPKEY: "5a17d309f43e4852fe000120"]
+        }
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.jusfoun
+//            resValue "string", "host", "http://192.168.1.6:65432"
+            resValue "string", "host", "http://api.jinshangmei.top/"
+//            resValue "string", "host", "http://172.16.100.85:8115/"
+//            resValue "string", "host", "http://192.168.1.188/duijiang/"
+//            resValue "string", "host", "http://api.imjuxin.com/duijiang/"
+            // 运营商ID
+            buildConfigField "String", "COMPANYID", '"123456"'
+            // 测试key， liuguangdan 账号
+            manifestPlaceholders = [UMENG_APPKEY: "5a17d437a40fa373ed00001f"]
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    productFlavors {
+    }
+
+    // 处理 Duplicate files copied in APK META-INF/license.txt 的问题，
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    productFlavors {
+        oppo {
+        }
+        '360_channel' {
+
+        }
+
+        huawei {
+
+        }
+
+        samsung {
+
+        }
+
+        vivo {
+
+        }
+
+        meizu {
+
+        }
+
+        baidu {
+
+        }
+
+        myapp {
+
+        }
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            output.processManifest.doLast {
+                def manifestFile = output.processManifest.manifestOutputFile
+                def updatedContent = manifestFile.getText('UTF-8').replaceAll("UMENG_CHANNEL_VALUE", "${variant.productFlavors[0].name}")
+                manifestFile.write(updatedContent, 'UTF-8')
+            }
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile files('libs/jcore-android-1.1.5.jar')
+    compile files('libs/jpush-android-3.0.7.jar')
+    //    compile 'cn.yipianfengye.android:zxing-library:2.2'
+    compile 'com.google.code.gson:gson:2.8.1'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.readystatesoftware.systembartint:systembartint:1.0.4'
+    compile 'com.jakewharton:butterknife:8.8.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
+    compile('com.github.jdsjlzx:LRecyclerView:1.4.3') {
+        transitive = false;
+    }
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    /**
+     *    RXjava  retrofit相关
+     * */
+    compile 'io.reactivex:rxjava:1.1.6'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'com.jakewharton.rxbinding:rxbinding:0.4.0'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    //    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:converter-jackson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.1.2'
+    compile 'com.github.bumptech.glide:glide:4.0.0'
+    compile files('libs/AMap_Location_V3.5.0_20170731.jar')
+    compile project(':lib-zxing')
+    compile files('libs/time.jar')
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.28'
+    compile('cn.qqtheme.framework:WheelPicker:1.5.5') {
+        exclude group: 'com.android.support'
+    }
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.9.4@aar'
+    compile('com.github.hotchemi:permissionsdispatcher:3.0.1') {
+        // if you don't use android.app.Fragment you can exclude support for them
+        exclude module: "support-v13"
+    }
+    annotationProcessor "com.github.hotchemi:permissionsdispatcher-processor:3.0.1"
+    compile files('libs/umeng-analytics-v6.1.2.jar')
+    compile files('libs/utdid4all-1.0.4.jar')
+    compile(name: 'mylibrary-release', ext: 'aar')
+}

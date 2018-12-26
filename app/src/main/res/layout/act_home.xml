@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/C_Layout_Root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/vNavigation"
+        layout="@layout/view_navigation" />
+
+    <View
+        android:id="@+id/vShadow"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/vNavigation"
+        android:background="@drawable/shape_shadow" />
+
+    <android.support.v4.app.FragmentTabHost
+        android:id="@+id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/vShadow">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#D0D0D0" />
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </android.support.v4.app.FragmentTabHost>
+
+</RelativeLayout>

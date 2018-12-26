@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <com.github.jdsjlzx.recyclerview.LRecyclerView
+        android:id="@+id/recycle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/titleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#10588d"
+        android:clickable="true">
+
+        <View
+            android:id="@+id/vNav"
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/vNav"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/search_titile_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="征金在线"
+                android:textColor="#FFF"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

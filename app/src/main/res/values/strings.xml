@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">礼送贵宾</string>
+
+
+
+    <string name="html_logistics">/html/html/logistics.html</string>
+    <string name="html_prizeDetails">/html/html/prizeDetails.html?pid=02</string>
+</resources>

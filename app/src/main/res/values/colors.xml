@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="common">#FF3300</color>
+    <color name="common_gray">#F1F0EE</color>
+    <color name="common_black">#7C7974</color>
+
+    <color name="tab_textcolor_selected">#0097EE</color> <!-- 选项卡文字选中颜色 -->
+    <color name="tab_textcolor_normal">#C2BEB7</color><!-- 选项卡文字未选中颜色 -->
+
+    <color name="background_tab_pressed">#6633B5E5</color>
+
+</resources>

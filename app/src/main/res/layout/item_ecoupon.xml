@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_common_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="5dp"
+            android:padding="10dp"
+            android:text="福惠卡"
+            android:textColor="#333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvName"
+            android:lineSpacingExtra="5dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:text="62224232422423423423"
+            android:textColor="@color/common_black"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/vStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/img_xj" />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/C_Gray"
+        android:layout_below="@id/tvNo" />
+
+</LinearLayout>

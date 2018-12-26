@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:scrollbars="none"
+    android:fillViewport="true"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFF"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/common_gray" />
+
+        <View style="@style/C_Line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/img_icon" />
+
+            <TextView
+                android:id="@+id/tvPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#666"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <View style="@style/C_Line" />
+
+        <LinearLayout
+            android:id="@+id/vExchange"
+            style="@style/C_3">
+
+            <ImageView
+                style="@style/C_4"
+                android:src="@drawable/img_aa" />
+
+            <TextView
+                style="@style/C_5"
+                android:text="兑换记录" />
+
+        </LinearLayout>
+
+        <View style="@style/C_Line" />
+
+        <LinearLayout
+            android:id="@+id/vMyECoupon"
+            style="@style/C_3">
+
+            <ImageView
+                style="@style/C_4"
+                android:src="@drawable/img_xf" />
+
+            <TextView
+                style="@style/C_5"
+                android:text="我的电子券" />
+
+        </LinearLayout>
+
+        <View style="@style/C_Gray" />
+
+        <LinearLayout
+            android:id="@+id/vECouponManage"
+            style="@style/C_3"
+            android:visibility="gone">
+
+            <ImageView
+                style="@style/C_4"
+                android:src="@drawable/img_xb" />
+
+            <TextView
+                style="@style/C_5"
+                android:text="赠送电子券" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/C_Line"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/vFlowManage"
+            style="@style/C_3"
+            android:visibility="gone">
+
+            <ImageView
+                style="@style/C_4"
+                android:src="@drawable/img_xg" />
+
+            <TextView
+                style="@style/C_5"
+                android:text="物流管理" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/vLine1"
+            style="@style/C_Line"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/vOrderAudit"
+            style="@style/C_3"
+            android:visibility="gone">
+
+            <ImageView
+                style="@style/C_4"
+                android:src="@drawable/img_xh" />
+
+            <TextView
+                style="@style/C_5"
+                android:text="订单审核" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/vLine2"
+            style="@style/C_Line"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/vCardManage"
+            style="@style/C_3"
+            android:visibility="gone">
+
+            <ImageView
+                style="@style/C_4"
+                android:src="@drawable/img_xd" />
+
+            <TextView
+                style="@style/C_5"
+                android:text="发卡管理" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/vLine3"
+            style="@style/C_Line"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/vCardHistory"
+            style="@style/C_3"
+            android:visibility="gone">
+
+            <ImageView
+                style="@style/C_4"
+                android:src="@drawable/img_xe" />
+
+            <TextView
+                style="@style/C_5"
+                android:text="发卡历史" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/vGray"
+            style="@style/C_Gray"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/vService"
+            style="@style/C_3">
+
+            <ImageView
+                style="@style/C_4"
+                android:src="@drawable/img_ab" />
+
+            <TextView
+                style="@style/C_5"
+                android:text="联系客服：" />
+
+            <TextView
+                android:id="@+id/text_phone"
+                style="@style/C_5"
+                android:textColor="#888" />
+
+        </LinearLayout>
+
+        <View style="@style/C_Line" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btLogout"
+            style="@style/C_Common_Red"
+            android:layout_gravity="bottom"
+            android:layout_margin="40dp"
+            android:text="退出登录" />
+
+    </LinearLayout>
+</ScrollView>

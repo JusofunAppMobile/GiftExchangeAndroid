@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>礼品详情</title>
+	<meta name="viewport" id="WebViewport" content="initial-scale=1, maximum-scale=1,minimum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../css/common.css" />
+	<link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+    <div class="wrap padd_top">
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper inner_img">
+                <!-- <div class="swiper-slide">
+                    <div class="img_box">
+                        <img src="../images/pic_1.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img_box">
+                        <img src="../images/pic_2.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="img_box">
+                        <img src="../images/pic_3.png" alt="">
+                    </div>
+                </div> -->
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="prizeInfo box_padd margin_top">
+            <h6 class="cpzq_h">礼品详情:</h6>
+            <div class="xq_table" id="inner_text">
+                
+            </div>
+            
+        </div>
+    </div>
+	<script src="../js/jquery-1.8.0.min.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <script type="text/javascript" src="data.json"></script>
+    <script>
+    var pid=getQueryString("pid");
+    var img_str='';
+    var text_str='';
+    var flag=false;
+        /*$.ajax({ 
+            url: "data.json",
+            type:"GET" ,
+            dataType: "json",
+            success: function(res){
+               if(res.data){
+                $(res.data).each(function(index,element){
+                    if(pid==res.data[index].pid){
+                        flag=true;
+                        $(element.imgs).each(function(i,txt){
+                            img_str+='<div class="swiper-slide"><img src="'+txt.url+'" alt=""></div>';
+                        })
+                        text_str=element.content;
+                    }
+                })
+                if(!flag){
+                        alert("没有此商品！！！")
+                }
+               }
+               $(".inner_img").html(img_str);
+               $("#inner_text").html(text_str);
+               var swiper = new Swiper('.swiper-container', {
+                    pagination: '.swiper-pagination',
+                    paginationType: 'fraction'
+                    //autoHeight:true
+                });
+            }
+        });*/
+       var mydata = JSON.parse(data);
+        //console.log(mydata);
+        if(mydata.data){
+                $(mydata.data).each(function(index,element){
+                    if(pid==mydata.data[index].pid){
+                        flag=true;
+                        $(element.imgs).each(function(i,txt){
+                            img_str+='<div class="swiper-slide"><img src="'+txt.url+'" alt=""></div>';
+                        })
+                        text_str=element.content;
+                    }
+                })
+                if(!flag){
+                        alert("没有此商品！！！")
+                }
+               }
+               $(".inner_img").html(img_str);
+               $("#inner_text").html(text_str);
+               var swiper = new Swiper('.swiper-container', {
+                    pagination: '.swiper-pagination',
+                    paginationType: 'fraction'
+                    //autoHeight:true
+                });
+
+        function getQueryString(name) { 
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+            var r = window.location.search.substr(1).match(reg); 
+            if (r != null) return unescape(r[2]); return ""; 
+        };
+	    
+    </script>
+</body>
+</html>

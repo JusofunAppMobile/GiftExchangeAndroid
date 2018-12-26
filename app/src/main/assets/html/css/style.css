@@ -1,0 +1,222 @@
+/*公共的class*/
+body{
+	background: #fff;
+}
+.wrap{
+  background:#f0f0f0;
+}
+.img_box{
+ /*  display: flex; */ 
+}
+.swiper-slide img{
+	 max-width: 100%; height: auto; margin: auto; vertical-align: middle;
+}
+.margin_top{
+  margin-top: 1rem;
+}
+.margin_bot{
+  margin-bottom: : 1rem;
+}
+.box_padd{
+  padding: 0 4%;
+}
+.back_fff{
+  background: #fff;
+}
+.padd_top{
+  padding-top: 1rem;
+}
+.flex_box{
+  display: flex;
+}
+/*.border-1px{
+	border-top: solid 1px #d4d4d4;
+}
+.border_top{
+	border-top: solid 1px #d4d4d4;
+}
+.border_bot{
+	border-bottom: solid 1px #d4d4d4;
+}
+.border_left{
+	border-left: solid 1px #d4d4d4;
+}
+.border_right{
+	border-right: solid 1px #d4d4d4;
+}*/
+
+/*手机端实现真正的一像素边框*/
+.border-1px, .border_top, .border_bot, .border_left, .border_right {
+   position: relative;
+ }
+/*线条颜色 黑色*/
+.border-1px::after, .border_top::after, .border_bot::after, .border_left::after, .border_right::after {
+     background-color: #d4d4d4; 
+}
+ /*底边边框一像素*/
+.border_bot::after {
+     content:"";
+     position: absolute; 
+     left: 0;
+     bottom: 0;
+     width: 100%;
+     height: 1px;
+     transform-origin: 0 0;
+ }
+
+ /*上边边框一像素*/
+.border_top::after {
+   content:"";
+    position: absolute; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    transform-origin: 0 0;
+}
+
+ /*左边边框一像素*/
+.border_left::after {
+  content:"";
+  position: absolute; 
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  transform-origin: 0 0;
+ }
+/*右边边框1像素*/
+.border_right::after {
+          content: "";
+          box-sizing: border-box;
+          position: absolute; 
+          right: 0;
+          top: 0;
+          width: 1px;
+          height: 100%;
+          transform-origin: 0 0;
+ }
+/*边框一像素*/
+.border-1px::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid red;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2.0), only screen and (min-resolution: 2dppx) {
+	.border_bot::after{
+		bottom: -0.5px;
+	}
+    .border_bot::after, .border_top::after {
+      transform: scaleY(0.5);
+    }  
+   .border_left::after, .border_right::after {
+       transform: scaleX(0.5);
+    } 
+   .border-1px::after {
+          width: 200%;
+          height: 200%;
+          transform: scale(0.5);
+            transform-origin: 0 0;
+     }
+}
+/*手机端实现真正的一像素边框  结束*/
+
+
+/*奖品详情*/
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+  right: 1rem; width: 4rem; height: 4rem; border-radius: 50%; background: rgba(0,0,0,0.4); font-size: 1.5rem; color: #fff; line-height: 4rem;
+}
+.swiper-slide{
+  height: auto; display:flex;display: -webkit-flex;justify-content: flex-start; align-items: center;
+}
+.prizeInfo{
+  background: #fff; padding-bottom: 2rem;
+}
+.cpzq_h{
+  font-size: 1.6rem; color: #ff6301;  line-height: 4rem;
+}
+.xq_table table{
+  border:solid 1px #eeeeee; width: 100%;
+}
+.xq_table td{
+  border:solid 1px #eeeeee; padding:1.2rem 0.8rem; line-height: 1.5rem; font-size: 1.3rem; word-break: break-all; vertical-align: middle;
+}
+
+
+/*物流单号*/
+.yundanhao{
+   padding-top: 1rem; padding-bottom: 1rem; font-size: 1.4rem; color: #888888;
+}
+.img_l{
+  margin-right: 1.5rem;
+}
+.img_s{
+  width: 5rem;
+}
+.wuliu{
+  padding: 2rem 4% 0; padding-left: 2rem;
+}
+.wuliu ul{
+  border-left: solid 1px #dbdbdb; padding-left: 1.5rem;
+}
+.wuliu ul li{
+  font-size: 1.3rem; line-height: 2rem; padding: 1rem 0; position: relative; border-bottom: solid 1px #f0f0f0;
+}
+.wuliu ul li span{
+  width: 1rem; display:inline-block; background: #dbdbdb; border-radius: 50%; height: 1rem; position: absolute; top: 1.5rem; left: -2rem;
+}
+.wuliu ul li span.first_icon{
+   background: radial-gradient( #ff6301 0%, #ff6301 40%, #ffb180 50%,  #ffb180 100%); width: 1.5rem; height: 1.5rem; left: -2.25rem;
+}
+.wuliu ul li.first_li:before{
+  content: ''; height: 1.5rem; width: 1px; background: #fff; position: absolute; left: -1.5rem; margin-left: -1px; top:0;
+  
+}
+.wuliu ul li.last_li:before{
+  content: ''; height: 100%; width: 1px; background: #fff; position: absolute; left: -1.5rem; margin-left: -1px; top:1.5rem;
+  
+}
+.wuliu ul li dt{
+   color: #b1b1b1;
+}
+.wuliu ul li dd{
+  color: #b1b1b1;
+}
+.wuliu ul li:first-child dt{
+  color: #333333;
+}
+
+
+
+/*兑奖规则*/
+.lc_info{
+  padding:2rem 0 0;
+}
+.flex_l{
+  flex: 1;
+}
+.flex_l img{
+  width:45%; margin-left: 20%; margin-top: 1rem; max-height: 8rem;
+}
+.flex_r{
+  flex: 2; position: relative;  border-left:dotted 1px #ff5209; padding: 1rem 0 0; height: 9rem; position: relative;
+}
+.flex_r p{
+  font-size: 1.6rem; color: #333333; padding-left: 2rem; line-height: 2rem;
+}
+.flex_r span{
+  position: absolute; left: -1.25rem; top: 1rem; height: 2.5rem; width: 2.5rem; color: #fff; background: #ff5209; line-height:2.5rem; border-radius: 50%; text-align: center; display: inline-block; font-size: 1.6rem;
+}
+.first_lc:before{
+  content: ''; height: 1.5rem; width: 1px; background: #fff; position: absolute; margin-left: -1px; top:0;
+  
+}
+.last_lc:before{
+  content: ''; height: 90%; width: 1px; background: #fff; position: absolute; margin-left: -1px; top:1.5rem;
+  
+}

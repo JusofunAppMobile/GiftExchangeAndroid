@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/C_Layout_Root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_navigation" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View style="@style/C_Empty_Gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:text="卡密兑奖"
+                android:textColor="#666"
+                android:textSize="14sp" />
+
+            <View style="@style/C_Line" />
+
+            <LinearLayout style="@style/C_3">
+
+                <TextView
+                    style="@style/C_6"
+                    android:text="卡号：" />
+
+                <EditText
+                    android:id="@+id/etCardNo"
+                    style="@style/C_8"
+                    android:hint="请输入卡号" />
+
+            </LinearLayout>
+
+            <View style="@style/C_Line" />
+
+            <LinearLayout style="@style/C_3">
+
+                <TextView
+                    style="@style/C_6"
+                    android:text="密码：" />
+
+                <EditText
+                    android:id="@+id/etCardPwd"
+                    style="@style/C_8"
+                    android:hint="请输入密码" />
+
+            </LinearLayout>
+
+            <View style="@style/C_Line" />
+
+            <Button
+                android:onClick="exchanger"
+                style="@style/C_Common_Red"
+                android:layout_marginBottom="40dp"
+                android:layout_marginTop="30dp"
+                android:text="兑奖" />
+
+            <View style="@style/C_Line" />
+
+            <View style="@style/C_Empty_Gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:text="兑奖指南"
+                android:textColor="#666"
+                android:textSize="14sp" />
+
+            <View style="@style/C_Line" />
+
+            <LinearLayout style="@style/C_9">
+
+                <ImageView
+                    style="@style/C_10"
+                    android:src="@drawable/img_ad" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <com.jusfoun.ui.widget.VerticalDashView style="@style/C_11"
+                        android:layout_alignParentBottom="true"
+                        android:layout_height="40dp" />
+
+                    <ImageView
+                        style="@style/C_12"
+                        android:src="@drawable/img_num1" />
+
+                </RelativeLayout>
+
+                <TextView
+                    style="@style/C_13"
+                    android:text="通过扫码兑奖卡或输入卡密进行兑换" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/C_9">
+
+                <ImageView
+                    style="@style/C_10"
+                    android:src="@drawable/img_ae" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <com.jusfoun.ui.widget.VerticalDashView style="@style/C_11" />
+
+                    <ImageView
+                        style="@style/C_12"
+                        android:src="@drawable/img_num2" />
+
+                </RelativeLayout>
+
+                <TextView
+                    style="@style/C_13"
+                    android:text="选择您心怡的奖品" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/C_9">
+
+                <ImageView
+                    style="@style/C_10"
+                    android:src="@drawable/img_af" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <com.jusfoun.ui.widget.VerticalDashView style="@style/C_11" />
+
+                    <ImageView
+                        style="@style/C_12"
+                        android:src="@drawable/img_num3" />
+
+                </RelativeLayout>
+
+                <TextView
+                    style="@style/C_13"
+                    android:text="填写您的收货地址，并提交" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/C_9">
+
+                <ImageView
+                    style="@style/C_10"
+                    android:src="@drawable/img_ag" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <com.jusfoun.ui.widget.VerticalDashView style="@style/C_11"
+                        android:layout_height="40dp"
+                        />
+
+                    <ImageView
+                        style="@style/C_12"
+                        android:src="@drawable/img_num4" />
+
+                </RelativeLayout>
+
+                <TextView
+                    style="@style/C_13"
+                    android:text="等待收货" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

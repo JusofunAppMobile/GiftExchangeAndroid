@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFF"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/C_22"
+            android:text="订单号：" />
+
+        <TextView
+            android:id="@+id/tvNo"
+            style="@style/C_23"
+            android:text="111111111" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2017-08-01 14:20"
+            android:textColor="#9C9893"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View style="@style/C_Line" />
+
+    <LinearLayout
+        style="@style/C_24"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            style="@style/C_22"
+            android:text="收件人：" />
+
+        <TextView
+            android:id="@+id/tvName"
+            style="@style/C_23"
+            android:text="舒发杰" />
+
+    </LinearLayout>
+
+
+    <LinearLayout style="@style/C_24">
+
+        <TextView
+            style="@style/C_22"
+            android:text="收件电话：" />
+
+        <TextView
+            android:id="@+id/tvPhone"
+            style="@style/C_23"
+            android:text="18888888888" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/C_24">
+
+        <TextView
+            style="@style/C_22"
+            android:text="收件地址：" />
+
+        <TextView
+            android:id="@+id/tvAddr"
+            style="@style/C_23"
+            android:maxLines="2"
+            android:text="北京市 海淀区 王庄路1号清华同方科技广场D座西楼16层" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/C_Line"
+        android:layout_marginTop="10dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/vDetail"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:layout_marginRight="10dp"
+            />
+
+        <ImageView
+            android:id="@+id/iv2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:visibility="gone"
+            android:scaleType="centerCrop"
+            android:layout_marginRight="10dp"
+            />
+
+        <ImageView
+            android:id="@+id/iv3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:visibility="gone"
+            android:scaleType="centerCrop"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:ellipsize="end"
+            android:layout_weight="1"
+            android:maxLines="2"
+            android:text="飞科剃须刀"
+            android:textColor="#333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvType"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:ellipsize="end"
+            android:text="福惠卡X1"
+            android:textColor="#333"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <View style="@style/C_Line" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/tvNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="共1个奖品"
+            android:textColor="#999"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1px"
+            android:layout_weight="1" />
+
+
+        <TextView
+            android:id="@+id/tvOperation_left"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/shape_stroke_blue"
+            android:gravity="center"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:text="审核"
+            android:textColor="#0093F7"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:id="@+id/tvOperation"
+            android:text="审核"
+            style="@style/C_Stroke_Yellow" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/C_Empty_Gray"
+        android:layout_height="5dp" />
+
+
+</LinearLayout>

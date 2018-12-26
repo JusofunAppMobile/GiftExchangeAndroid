@@ -1,0 +1,245 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!-- 沉侵式状态栏主题, 所有Activity的布局页面都使用该主题-->
+    <style name="C_Layout_Root" parent="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:background">#FFF</item>
+    </style>
+
+    <style name="C_Gray">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">8dp</item>
+        <item name="android:background">@color/common_gray</item>
+    </style>
+
+    <!--通用横线的样式-->
+    <style name="C_Line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.8dp</item>
+        <item name="android:background">#e6e3de</item>
+    </style>
+
+    <!-- 启动页需要设置的主题，启动页的背景图片名字为 img_splash, 可以为9png图片-->
+    <style name="C_Theme.Splash" parent="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+        <item name="android:windowBackground">@drawable/layer_splash_bg</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:screenOrientation">portrait</item>
+        <item name="android:configChanges">orientation|keyboardHidden|locale|navigation|screenSize
+        </item>
+    </style>
+
+    <!--通用对话框样式-->
+    <style name="C_Theme.Widget.Dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <!-- 自定义dialog-->
+    <style name="C_Dialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+
+    <style name="C_Common_Red">
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:layout_marginRight">40dp</item>
+        <item name="android:textColor">#FFF</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@drawable/selector_red_camera</item>
+    </style>
+
+    <style name="C_Empty_Gray">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">10dp</item>
+        <item name="android:background">@color/common_gray</item>
+    </style>
+
+
+    <style name="C_1">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">#333</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColorHint">#999</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:background">#FFF</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="C_2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="C_3">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:background">@drawable/selector_common_bg</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingLeft">10dp</item>
+    </style>
+
+    <style name="C_4">
+        <item name="android:layout_width">18dp</item>
+        <item name="android:layout_height">18dp</item>
+    </style>
+
+    <style name="C_5">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#333</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="C_6">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#333</item>
+    </style>
+
+    <style name="C_8">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:background">#FFF</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#333</item>
+        <item name="android:textColorHint">#999</item>
+    </style>
+
+    <style name="C_9">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+    </style>
+
+    <style name="C_10">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+    </style>
+
+    <style name="C_11">
+        <item name="android:layout_width">4dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_centerHorizontal">true</item>
+
+    </style>
+
+    <style name="C_12">
+        <item name="android:layout_width">15dp</item>
+        <item name="android:layout_height">15dp</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="C_13">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:lineSpacingExtra">5dp</item>
+        <item name="android:textColor">#333</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="C_18">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#333</item>
+    </style>
+
+    <style name="C_19">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:background">#00000000</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#333</item>
+        <item name="android:textColorHint">#999</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:inputType">text</item>
+    </style>
+
+    <style name="C_22">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#393A3A</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="C_23">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">#9C9893</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingExtra">8dp</item>
+    </style>
+
+    <style name="C_24">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+
+    </style>
+    <style name="C_25">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#9C9893</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="C_Stroke_Yellow">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:background">@drawable/shape_stroke_red</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:textColor">#FF4F00</item>
+    </style>
+
+    <style name="C_26">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">38dp</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:background">@drawable/shape_gray_big_corner</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="tab_text_size">16sp</dimen>
+    <dimen name="tab_text_size_select">18sp</dimen>
+
+    <!-- 加载框 -->
+    <dimen name="default_progress_bar_width">100.0dip</dimen>
+    <dimen name="default_progress_bar_height">100.0dip</dimen>
+
+</resources>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_common_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="5dp"
+        android:padding="10dp"
+        android:text="北京工商银行亚运村支行-马大帅"
+        android:textColor="#333"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/tvTypeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="5dp"
+            android:text="福安卡"
+            android:textColor="#333"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="5dp"
+            android:text="100张"
+            android:textColor="@color/common_black"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1px"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:lineSpacingExtra="5dp"
+            android:text="2017-10-01 12:20:33"
+            android:textColor="@color/common_black"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <View style="@style/C_Line" />
+
+</LinearLayout>

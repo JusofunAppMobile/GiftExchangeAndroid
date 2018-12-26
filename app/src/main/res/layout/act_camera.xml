@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/C_Layout_Root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/vFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:id="@+id/btn_exchange"
+        style="@style/C_Common_camera"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="35dp"
+        android:layout_marginTop="50dp"
+        android:onClick="cardpwdExchange"
+        android:text="卡密兑奖" />
+
+    <include layout="@layout/view_navigation" />
+
+</RelativeLayout>
